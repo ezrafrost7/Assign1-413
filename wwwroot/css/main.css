@@ -1,0 +1,15 @@
+﻿body {
+    background-color: darkgreen;
+    font-size: larger;
+    font-family: Arial;
+    text-align: center;
+}
+
+ul.jobs li{
+    list-style-type: none;
+}
+
+label{
+    width: 150px;
+    display: inline-block;
+}

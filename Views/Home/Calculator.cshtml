@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    //change the title for this page
+    ViewBag.Title = "Grade Calculator";
+}
+<!--this imports the model into teh page for use-->
+@model Assign1_413.Models.CalculatorModel
+
+<!--form for the grade calculator, with each assignment section-->
+<h2>Grade Calculator</h2>
+<form id="grade-calc" method="post">
+
+    <!--you have the label and then the input for each grade portion
+        they correspond to a attribute which is referenced by asp-for-->
+    <label>Assignments:</label>
+    <input id="assignments" asp-for="assignments" /><br />
+
+    <label>Group Projects:</label>
+    <input id="groupProjects" asp-for="groupProjects" /><br />
+
+    <label>Quizzes:</label>
+    <input id="quizzes" asp-for="quizzes" /><br />
+
+    <label>Exams:</label>
+    <input id="exams" asp-for="exams" /><br />
+
+    <label>INTEX:</label>
+    <input id="intex" asp-for="intex" /><br />
+    <div asp-validation-summary="All"></div>
+    <input type="submit" id="submitButton" />
+</form>

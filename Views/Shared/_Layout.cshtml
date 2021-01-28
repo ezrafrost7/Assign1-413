@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <!--icon to load on the tab-->
+    <link rel="icon" href="~/img/Maine.gif" />
+    <link href="~/css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <!--this is the sidebar that we use to switch pages-->
+    <header>
+        <h1>@ViewBag.Title</h1>
+        <menu>
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Home" asp-action="Calculator">Grade Calculator</a></li>
+            </ul>
+        </menu>
+    </header>
+
+    <!--this is where the individual page rendering is input-->
+    @RenderBody()
+
+    <footer>Brought to you by Ezra Frost</footer>
+
+    <!--load in the javascript file-->
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/gradeCalc.js"></script>
+</body>
+</html>
